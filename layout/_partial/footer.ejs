@@ -1,0 +1,9 @@
+<div class="container-xl text-center my-5">
+  <div class="text-secondary">
+    <% if (config.author){ %>
+    &copy; <%= new Date().getFullYear() %> <%= config.author %>
+    <% } else { %>
+    &copy; <%= new Date().getFullYear() %> <%= config.title %>
+    <% } %>
+  </div>
+</div>

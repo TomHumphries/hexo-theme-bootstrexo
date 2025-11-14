@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="<%= config.language %>" data-bs-theme="dark">
+<%- partial('_partial/head') %>
+
+  <body>
+    <header id="header"><%- partial('_partial/header') %></header>
+    <div class="container-xl">
+      <div class="row">
+        <div class="py-3 col-xl-3"></div>
+        <div class="py-3 col-xl-6 col-md-8">
+          <%- body %>
+        </div>
+        <div class="py-3 col-xl-3 col-md-4">
+          <%- partial('_partial/sidebar', {}) %>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer"><%- partial('_partial/footer') %></footer>
+    <%- partial('_partial/after_footer') %>
+  </body>
+</html>

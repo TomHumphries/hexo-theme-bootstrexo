@@ -1,0 +1,40 @@
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="<%- url_for('/') %>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <span class="fs-4"><%= config.title %></span>
+    </a>
+    <ul class="nav nav-pills">
+        <% for (var i in theme.menu){ %>
+          <li class="nav-item">
+            <a class="nav-link text-reset" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+          </li>
+        <% } %>
+          <li class="nav-item d-flex align-items-center text-secondary">
+            <i class="bi bi-dot mx-2 mx-lg-4"></i>
+          </li>
+        <% if (theme.github) { %>
+          <li class="nav-item">
+            <a class="nav-link text-reset" href="<%= theme.github %>" target="_blank"><i class="bi bi-github"></i></a>
+          </li>
+        <% } %>
+        <% if (theme.linkedin) { %>
+          <li class="nav-item">
+            <a class="nav-link text-reset" href="<%= theme.linkedin %>" target="_blank"><i class="bi bi-linkedin"></i></a>
+          </li>
+        <% } %>
+        <% if (theme.medium) { %>
+          <li class="nav-item">
+            <a class="nav-link text-reset" href="<%= theme.medium %>" target="_blank"><i class="bi bi-medium"></i></a>
+          </li>
+        <% } %>
+        <li class="nav-item d-flex align-items-center text-secondary">
+          <i class="bi bi-dot mx-2 mx-lg-4"></i>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link text-reset" id="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+            <i class="bi bi-sun me-2"></i>
+          </button>
+        </li>
+    </ul>
+  </header>
+</div>

@@ -1,0 +1,21 @@
+<h1 class="fw-light mb-4">Posts in Category <span class="fw-bold"><%= page.category %></span></h1>
+
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <tbody>
+    <% page.posts.each((post) => { %>
+      <tr>
+        <td class="text-nowrap"><%= date(post.date, "YYYY-MM-DD") %></td>
+        <td class="w-100">
+          <a class="d-flex justify-content-between" href="<%- url_for(post.path) %>">
+            <span class="d-block"><%= post.title %></span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </td>
+      </tr>
+    <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- partial('_partial/pagination') %>

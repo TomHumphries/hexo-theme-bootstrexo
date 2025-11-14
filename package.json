@@ -1,0 +1,13 @@
+{
+  "name": "hexo-theme-bootstrexo",
+  "version": "1.0.0",
+  "description": "Hexo Theme Bootstrexo",
+  "repository": "TomHumphries/hexo-theme-bootstrexo",
+  "keywords": [
+    "hexo",
+    "theme",
+    "bootstrap",
+    "bootstrexo"
+  ],
+  "license": "MIT"
+}

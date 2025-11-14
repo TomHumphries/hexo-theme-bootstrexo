@@ -1,0 +1,10 @@
+menu:
+  Archives: archives
+
+widgets:
+- category
+- tag
+
+github:
+linkedin:
+medium:

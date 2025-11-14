@@ -1,0 +1,27 @@
+<article class="post">
+    <h1 class="fs-3 m-0">
+        <a class="text-reset text-decoration-none" href="<%- url_for(page.path) %>"><%= page.title %></a>
+    </h1>
+    <div class="row">
+        <div class="col-auto my-3">
+            <time class="dt-published" datetime="<%= page.date.toDate().toISOString() %>">
+                <%= date(page.date, "YYYY-MM-DD") %>
+            </time>
+        </div>
+        <div class="col-auto">
+            <% page.categories.forEach(category => { %>
+                <span class="badge text-bg-primary m-1">
+                <a href="<%= url_for(category.path) %>" class="text-decoration-none text-reset"><%= category.name %></a>
+                </span>
+            <% }) %>
+        </div>
+        <div class="col-auto my-3">
+            <% if (page.tags && page.tags.length) { %>
+                <%- partial('_partial/tags', { tags: page.tags }) %>
+            <% } %>
+        </div>
+    </div>
+    <div>
+        <%- page.content %>
+    </div>
+</article>

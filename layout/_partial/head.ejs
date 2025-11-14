@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+  <title>
+    <% if (page.title) { %>
+      <%= page.title %> · 
+    <% } %>
+    <%= config.title %></title>
+  <% if (config.author){ %><meta name="author" content="<%= config.author %>"><% } %>
+  <% if (page.description){ %>
+  <meta name="description" content="<%= page.description %>">
+  <% } else if (config.description){ %>
+  <meta name="description" content="<%= config.description %>">
+  <% } else if (page.excerpt){ %>
+  <meta name="description" content="<%= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '') %>">
+  <% } else if (page.content){ %>
+  <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
+  <% } %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
+  <meta property="og:site_name" content="<%= config.title %>"/>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="<%= url_for('/css/styles.css') %>">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
