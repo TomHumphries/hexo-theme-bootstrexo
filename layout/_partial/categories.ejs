@@ -1,0 +1,5 @@
+<% categories.forEach(category => { %>
+    <span class="badge text-bg-primary m-1">
+        <a href="<%= url_for(category.path) %>" class="text-decoration-none text-reset"><i class="bi bi-bookmark me-2"></i><%= category.name %></a>
+    </span>
+<% }) %> 

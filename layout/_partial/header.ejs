@@ -9,9 +9,11 @@
             <a class="nav-link text-reset" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
           </li>
         <% } %>
+        <% if (theme.github || theme.linkedin || theme.medium) { %>
           <li class="nav-item d-flex align-items-center text-secondary">
             <i class="bi bi-dot mx-2 mx-lg-4"></i>
           </li>
+        <% } %>
         <% if (theme.github) { %>
           <li class="nav-item">
             <a class="nav-link text-reset" href="<%= theme.github %>" target="_blank"><i class="bi bi-github"></i></a>

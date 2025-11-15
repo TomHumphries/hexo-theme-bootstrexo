@@ -6,7 +6,9 @@
   <ul class="list-group list-group-flush">
   <% site.tags.sort('name').each(function(item){ %>
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <a href="<%- url_for(item.path) %>" class="badge text-decoration-none text-bg-info ms-2"><%= item.name %></a>
+      <span class="badge text-bg-info">
+        <a href="<%= url_for(item.path) %>" class="text-decoration-none text-reset"><i class="bi bi-hash me-2"></i><%= item.name %></a>
+      </span>
       <small><%= item.posts.length %></small>
     </li>
   <% }); %>
