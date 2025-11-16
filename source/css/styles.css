@@ -2,3 +2,7 @@
     max-width: 100%;
     height: auto;
 }
+
+.carousel-item {
+    transition: transform 0.1s ease-in-out;
+}
