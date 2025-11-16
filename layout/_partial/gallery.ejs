@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="row">
+    <% photos.forEach(photo => { %>
+        <div class="col-lg-4 col-6 py-1">
+            <a href="<%= photo %>" target="_blank">
+                <img src="<%= photo %>" class="img-fluid">
+            </a>
+        </div>
+    <% }); %>
+    </div>
+</div>

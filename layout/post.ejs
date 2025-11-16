@@ -19,6 +19,9 @@
             </div>
         <% } %>
     </div>
+    <% if (page.photos && page.photos.length) { %>
+        <%- partial('_partial/gallery', { photos: page.photos }) %>
+    <% } %>
     <div class="overflow-x-auto">
         <%- page.content %>
     </div>
