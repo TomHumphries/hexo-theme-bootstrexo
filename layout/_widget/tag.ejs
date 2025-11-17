@@ -1,7 +1,7 @@
 <% if (site.tags.length){ %>
 <div class="card my-3">
   <div class="card-header">
-    <i class="bi bi-hash text-secondary me-2"></i>Tags
+    <i class="bi bi-hash text-secondary me-2"></i><%= __('tags') %>
   </div>
   <ul class="list-group list-group-flush">
   <% site.tags.sort('name').each(function(item){ %>

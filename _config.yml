@@ -1,9 +1,12 @@
 menu:
-  Archives: archives
+  Archives: /archives
 
 widgets:
 - category
 - tag
+
+excerpt_link: Read More
+default_thumbnail: /images/default-thumbnail.svg
 
 github:
 linkedin:

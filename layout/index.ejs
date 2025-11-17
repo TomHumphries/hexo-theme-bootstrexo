@@ -6,7 +6,7 @@
         <% if (post.thumbnail) { %>
         <img src="<%= url_for(post.thumbnail) %>" alt="Thumbnail for <%= post.title %>" class="img-fluid rounded mb-3">
         <% } else { %>
-          <img src="<%= url_for('/images/default-thumbnail.svg') %>" alt="Default Thumbnail" class="img-fluid rounded mb-3">
+          <img src="<%= url_for(config.default_thumbnail) %>" alt="Default Thumbnail" class="img-fluid rounded mb-3">
         <% } %>
       </a>
     </div>
@@ -25,7 +25,7 @@
   
       <p>
         <%- strip_html(post.excerpt || post.content).substr(0, 140) %>
-        <% if ((post.excerpt || post.content).length > 140) { %><a href="<%- url_for(post.path) %>">...read more</a><% } %>
+        <% if ((post.excerpt || post.content).length > 140) { %><a href="<%- url_for(post.path) %>">...<%= __('read_more') %></a><% } %>
       </p>
     </div>
 

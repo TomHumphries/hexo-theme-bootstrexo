@@ -1,5 +1,4 @@
 function toggleTheme() {
-    console.log("Toggling theme");
     const root = document.documentElement;
     const current = root.getAttribute("data-bs-theme");
     root.setAttribute("data-bs-theme", current === "light" ? "dark" : "light");

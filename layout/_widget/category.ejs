@@ -1,7 +1,7 @@
 <% if (site.categories.length){ %>
 <div class="card my-3">
   <div class="card-header">
-    <i class="bi bi-bookmark me-2 text-secondary"></i>Categories
+    <i class="bi bi-bookmark me-2 text-secondary"></i><%= __('categories') %>
   </div>
   <ul class="list-group list-group-flush">
   <% site.categories.sort('name').each(function(item){ %>

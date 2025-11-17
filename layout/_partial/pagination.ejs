@@ -3,7 +3,7 @@
     <ul class="pagination">
       <li class="page-item<% if (!page.prev) { %> disabled<% } %>">
         <a class="page-link" href="<%- url_for(page.prev_link) %>" aria-label="Previous">
-          Prev
+          <%= __('prev') %>
         </a>
       </li>
       <li class="page-item">
@@ -13,7 +13,7 @@
       </li>
       <li class="page-item<% if (!page.next) { %> disabled<% } %>">
         <a class="page-link" href="<%- url_for(page.next_link) %>" aria-label="Next">
-          Next
+          <%= __('next') %>
         </a>
       </li>
     </ul>
